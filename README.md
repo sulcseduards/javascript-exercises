@@ -76,6 +76,30 @@ In the [azure-pipelines.yml](./azure-pipelines.yml) which is located in the root
 
 `docker run javascript-exercises:latest run test:easy`
 
+### Medium (branch name: medium)
+
+Add following command in [azure-pipelines.yml](./azure-pipelines.yml):
+
+`docker run javascript-exercises:latest run test:medium`
+
+And add appropriate script in [package.json](./package.json) file.
+
+## Handling example project updates
+
+1. Make sure that you have committed all your changes.
+
+2. Switch remote to the original repository:
+
+`git remote set-url origin https://github.com/codelex-io/javascript-exercises.git`
+
+3. Fetch latest changes:
+
+`git pull`
+
+4. Switch remote back to your repository:
+
+`git remote set-url origin https://github.com/{username}/javascript-exercises.git`
+
 # How to learn?
 
 ## [w3schools.com](https://www.w3schools.com/js/default.asp)
