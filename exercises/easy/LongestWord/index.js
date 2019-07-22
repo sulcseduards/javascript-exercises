@@ -11,7 +11,20 @@
  * longestWord("My name is Adam") === "name"
  * longestWord("fun&!! time") === "time"
  */
+function cleanUpWord(word) {
+    return word.replace(/[^a-z]/gi, '')
+}
 
-function longestWord(sen) {}
+function longestWord(sen) {
+    let words = sen.split(' ')
+    let longestWord = cleanUpWord(words[0])
+    for (let i in words) {
+        let word = cleanUpWord(words[i])
+        if (longestWord.lenght < word.length) {
+            longestWord = word
+        }
+    }
+    return longestWord
+}
 
 module.exports = longestWord;

@@ -19,6 +19,13 @@
  *            '####'
  */
 
-function steps(n) {}
+function steps(n) {
+    let newArray = []
+    for (let i = 0; i < array.length; i++) {
+        let currentElement = array[i] +1
+        newArray.push(currentElement)
+    }
+    return newArray
+}
 
 module.exports = steps;

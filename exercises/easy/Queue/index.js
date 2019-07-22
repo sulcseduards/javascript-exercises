@@ -12,6 +12,22 @@
  * q.remove(); // returns 1
  */
 
-class Queue {}
+class Queue {
+    constructor() {
+      this.numbers = []
+    }
+  
+    add(number) {
+      this.numbers.unshift(number);
+    }
+  
+    remove() {
+      return this.numbers.pop();
+    }
+  
+    peek() {
+      return this.numbers[numbers.length - 1];
+    }
+  }
 
 module.exports = Queue;

@@ -4,6 +4,8 @@
  * Array of numbers are passed in the function, your task is to find the second largest number.
  */
 
-function secondLargest(array) {}
+function secondLargest(array) {
+    
+}
 
 module.exports = secondLargest;

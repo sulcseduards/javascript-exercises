@@ -10,7 +10,21 @@
  */
 
 class Words {
-  count(str) {}
+  count(str) {
+    str = str.replace(/\s+/g, ' ');
+    let arrStr = str.trim().split(' ')
+    let ObjStr = {}
+    for (let i = 0; i < arrStr.length; i++) {
+      let item = arrStr[i].toLowerCase()
+      if (ObjStr.hasOwnProperty(item)) {
+        ObjStr[item] += 1
+      }
+      else {
+        ObjStr[item] = 1
+      }
+    }
+    return ObjStr;
+  }
 }
 
 module.exports = Words;
