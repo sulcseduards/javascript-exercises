@@ -36,7 +36,7 @@
 
 class Matrix {
   constructor(matrix) {
-    this.matrix = matrix
+    this.matrix = matrix;
     this._rows = matrix.split("\n").map(x => x.split(" ").map(y => +y));
     this._cols = this._rows[0].map((_, i) => this._rows.map(row => row[i]));
   }
@@ -51,7 +51,3 @@ class Matrix {
 }
 
 module.exports = Matrix;
-
-
-
-
