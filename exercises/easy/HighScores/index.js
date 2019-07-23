@@ -10,26 +10,26 @@ class HighScores {
   }
 
   get latest() {
-     return this.scores[this.scores.length - 1]
+    return this.scores[this.scores.length - 1];
   }
 
   get personalBest() {
-    let best = 0
+    let best = 0;
     for (let i in this.scores) {
-      let currentScore = this.scores[i]
-      if (currentScore > best){
-        best = currentScore
+      let currentScore = this.scores[i];
+      if (currentScore > best) {
+        best = currentScore;
       }
     }
-    return best
+    return best;
   }
 
   get personalTopThree() {
-    let scores = this.scores
-    let sortedScores = scores.sort((a, b) => a - b)
-    let topThree = sortedScores.slice(-3)
-    let reversedTopThtree = topThree.sort((a, b) => b - a)
-    return reversedTopThtree
+    let scores = this.scores;
+    let sortedScores = scores.sort((a, b) => a - b);
+    let topThree = sortedScores.slice(-3);
+    let reversedTopThtree = topThree.sort((a, b) => b - a);
+    return reversedTopThtree;
   }
 }
 

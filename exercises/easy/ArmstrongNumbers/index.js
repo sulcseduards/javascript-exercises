@@ -12,14 +12,14 @@
  */
 
 function validate(number) {
-        let digit = undefined;
-        let sum = 0;
-        let charArray = String(number).split("");
-        for(let char of charArray){
-          digit = Number(char);
-          sum += Math.pow(digit, charArray.length);
-        }
-        return sum == number;
+  let digit = undefined;
+  let sum = 0;
+  let charArray = String(number).split("");
+  for (let char of charArray) {
+    digit = Number(char);
+    sum += Math.pow(digit, charArray.length);
+  }
+  return sum == number;
 }
 
 module.exports = validate;

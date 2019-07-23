@@ -5,7 +5,7 @@
  */
 
 function formatCities(array, fn) {
-    return array.map(fn)
+  return array.map(fn);
 }
 
 module.exports = formatCities;
