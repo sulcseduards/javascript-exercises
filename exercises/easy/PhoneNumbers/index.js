@@ -34,7 +34,6 @@ class PhoneNumber {
 
   number() {
     let number = this.input.replace(/[ -.\(\)\+]/g, "");
-    console.log(number);
     if (number.search(/[^\d]/) >= 0) {
       return null;
     }
