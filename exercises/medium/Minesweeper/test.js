@@ -1,4 +1,4 @@
-import { annotate } from './index';
+import { annotate } from "./index";
 
 describe(")", () => {
   test("handles no rows", () => {
