@@ -13,21 +13,21 @@
  */
 
 class Queue {
-  constructor() {
-    this.numbers = [];
+    constructor() {
+      this.numbers = []
+    }
+  
+    add(number) {
+      this.numbers.unshift(number);
+    }
+  
+    remove() {
+      return this.numbers.pop();
+    }
+  
+    peek() {
+      return this.numbers[numbers.length - 1];
+    }
   }
-
-  add(number) {
-    this.numbers.unshift(number);
-  }
-
-  remove() {
-    return this.numbers.pop();
-  }
-
-  peek() {
-    return this.numbers[numbers.length - 1];
-  }
-}
 
 module.exports = Queue;

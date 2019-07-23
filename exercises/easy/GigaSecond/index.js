@@ -6,9 +6,9 @@
  */
 
 function gigasecond(date) {
-  const gigasec = Math.pow(10, 9) * 1000;
-  const milliseconds = date.getTime();
-  return new Date(milliseconds + gigasec);
+    const gigasec = Math.pow(10, 9) * 1000
+    const milliseconds = date.getTime()
+    return new Date(milliseconds + gigasec)
 }
 
 module.exports = gigasecond;
