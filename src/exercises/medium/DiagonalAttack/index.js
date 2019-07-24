@@ -1,6 +1,6 @@
 /**
  * Diagonal Attack
- * 
+ *
  * Write a JS function that reads a given matrix of numbers, and checks if both main diagonals have equal sum. If they do, set every element that is NOT part of the main diagonals to that sum, alternatively just print the matrix unchanged.
  *
  * The input comes as array of strings. Each element represents a string of numbers, with spaces between them. Parse it into a matrix of numbers, so you can work with it.
