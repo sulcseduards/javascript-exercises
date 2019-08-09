@@ -1,6 +1,6 @@
 function trimWord(word) {
-  return wordtrim();
+  return (word);
 }
 
-const result = trimWord("  CODELEX ");
+const result = trimWord("CODELEX");
 console.log(result); // Expected result: "CODELEX"

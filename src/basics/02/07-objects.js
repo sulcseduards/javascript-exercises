@@ -33,3 +33,11 @@ const writers = [
     alive: true
   }
 ];
+
+function aliveWriters(writers) {
+  for (const writer in writers ) {
+    if (writers.alive === true) 
+    .push
+  //  return { `Hi, my name is ${firstName} ${lastName}. I am ${age} years old, and work as a ${occupation}.` }
+
+}

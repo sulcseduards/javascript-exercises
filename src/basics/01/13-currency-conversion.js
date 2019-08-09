@@ -6,7 +6,13 @@
  */
 
 // You are allowed to change only this function
-function convertToUSD() {}
+function convertToUSD() {
+    let GBP = 1;
+    let USD = GBP * 1.4;
+    let newPrice = USD * price;
+    var USDPrice = "$" + newPrice.toFixed(2);
+    return USDPrice;
+}
 
 const product = "You don't know JS";
 const price = 19.99;

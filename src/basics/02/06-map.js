@@ -6,9 +6,13 @@ function tidyUpString(str) {
 }
 
 // You are allowed to edit this function
-function capitalise(str) {}
+function capitalise(str) {
+  return str.split(' ').map(function(word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
 
 const mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-let mentorsTidy; // You are allowed to edit this line
+let mentorsTidy = mentors.map(tidyUpString).map(capitalise); // You are allowed to edit this line
 
 console.log(mentorsTidy); // Expected result: ["Daniel", "Irina", "Gordon", "Ashleigh"]

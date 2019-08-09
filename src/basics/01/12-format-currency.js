@@ -7,7 +7,10 @@
  */
 
 // You are allowed to change only this function
-function formatCurrency() {}
+function formatCurrency() {
+  let formatCurrency = "£" + price;
+  return formatCurrency
+}
 
 function calculateSalesTax(price) {
   return price * 0.2;
