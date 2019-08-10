@@ -35,7 +35,6 @@ class Odometer {
   }
 
   report() {
-    // if (this.counter >= 10) {
     console.log(`Current mileage is ${this.mileage}km`);
   }
 
@@ -61,12 +60,10 @@ const fuelGauge = new FuelGauge(10);
 const odometer = new Odometer(999999, fuelGauge);
 
 for (let i = 0; i <= 10; i++) {
-  // console.log('Filling up...')
   fuelGauge.increase();
 }
 
 for (let i = 0; i < 100; i++) {
-  // console.log('Driving..')
   odometer.increase();
 }
 
@@ -74,6 +71,3 @@ fuelGauge.report(); //10L in the tank
 odometer.report(); //100_000 milage
 
 module.exports = { Odometer, FuelGauge };
-
-// module.exports = FuelGauge
-// module.exports = Odometer
