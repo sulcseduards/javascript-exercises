@@ -28,7 +28,7 @@ class Video {
     this.user = null;
   }
 
-  getUserRating(userRating) {
+  updateUserRating(userRating) {
     this.allUserRatings.push(userRating);
   }
 
