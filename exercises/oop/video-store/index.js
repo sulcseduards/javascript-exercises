@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
-const { VideoStore } = require("./videostore")
+const { VideoStore } = require("./videostore");
 const store = new VideoStore();
-store.addMovie("Godfather II", 5)
-store.addMovie("The Matrix", 5)
-store.addMovie("Star Wars Episode IV: A New Hope", 5)
+store.addMovie("Godfather II", 5);
+store.addMovie("The Matrix", 5);
+store.addMovie("Star Wars Episode IV: A New Hope", 5);
 
 async function rentVideo() {
   const { choices, name } = await inquirer.prompt([
@@ -21,8 +21,10 @@ async function rentVideo() {
   ]);
 
   store.rentMovies(choices, name);
-  console.log(`Oh, ${name}. ${choices.map(c => c.name).join(", ")} is a good choice.`);
-  console.log(`movies: ${store.printContent}`)
+  console.log(
+    `Oh, ${name}. ${choices.map(c => c.name).join(", ")} is a good choice.`
+  );
+  console.log(`movies: ${store.printContent}`);
 }
 
 async function returnVideo() {
@@ -34,27 +36,27 @@ async function returnVideo() {
     }
   ]);
 
-if (store.getUserMoviesAsChoices(name).length >= 1) {
-  const { movie } = await inquirer.prompt([
-    {
-      name: "movie",
-      type: "list",
-      message: "Which one would you like to return?",
-      choices: store.getUserMoviesAsChoices(name)
-    }
-  ]);
-  const { movieRating } = await inquirer.prompt([
-    {
-      name: "movieRating",
-      type: "list",
-      message: "How would you rate this movie from 1 - 5",
-      choices: store.getUserRatingChoice(name)
-    }
-  ]);
-  store.returnMovie(movie, movieRating);
-} else {
-  console.log(`You don't have any movies to return!`)
-}
+  if (store.getUserMoviesAsChoices(name).length >= 1) {
+    const { movie } = await inquirer.prompt([
+      {
+        name: "movie",
+        type: "list",
+        message: "Which one would you like to return?",
+        choices: store.getUserMoviesAsChoices(name)
+      }
+    ]);
+    const { movieRating } = await inquirer.prompt([
+      {
+        name: "movieRating",
+        type: "list",
+        message: "How would you rate this movie from 1 - 5",
+        choices: store.getUserRatingChoice(name)
+      }
+    ]);
+    store.returnMovie(movie, movieRating);
+  } else {
+    console.log(`You don't have any movies to return!`);
+  }
 }
 
 async function fillVideoStore() {
@@ -66,8 +68,8 @@ async function fillVideoStore() {
       { type: "confirm", name: "more", message: "Would you like to add more?" }
     ]);
     addMore = more;
-    store.addMovie(movieName, movieRating)
-    console.log(`Thanks, here's a list of movies: ${store.printContent}`)
+    store.addMovie(movieName, movieRating);
+    console.log(`Thanks, here's a list of movies: ${store.printContent}`);
   }
 }
 
@@ -112,4 +114,3 @@ async function app() {
 }
 
 app();
-
