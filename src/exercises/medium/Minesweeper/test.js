@@ -1,4 +1,4 @@
-const annotate = require("./minesweeper");
+import { annotate } from "./index";
 
 describe(")", () => {
   test("handles no rows", () => {
