@@ -10,11 +10,8 @@
     "prettier:check": "prettier --check exercises/**/*.js"
   },
   "dependencies": {
+    "inquirer": "^6.5.0",
     "jest": "^24.8.0",
     "prettier": "1.18.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5"
   }
 }
